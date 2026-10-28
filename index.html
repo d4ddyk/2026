@@ -62,6 +62,8 @@ select{font-family:var(--body);font-size:20px;padding:8px 10px;border-radius:10p
 
 /* chrome */
 #chrome{position:absolute;left:0;right:0;bottom:0;height:62px;display:flex;align-items:center;gap:18px;padding:0 28px;background:rgba(255,255,255,.85);border-top:2px solid var(--line);font-family:var(--mono);font-size:15px;z-index:5}
+#qa-contact{position:absolute;right:110px;bottom:172px;margin:0;font-size:28px;font-weight:700;z-index:6;display:none}
+#qa-contact a{color:inherit}
 #progress{flex:1;display:flex;gap:4px;height:10px}
 #progress span{flex:1;background:var(--line);border-radius:3px;cursor:pointer}
 #progress span.done{background:var(--ink)} #progress span.cur{background:var(--ai)}
@@ -570,6 +572,7 @@ Thanks, R.
   <div class="cast" id="cast3" style="grid-template-columns:repeat(7,1fr);margin-top:30px"></div>
 </section>
 
+<p id="qa-contact"><a href="https://www.linkedin.com/in/vishnurg/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/vishnurg/</a></p>
 <div id="chrome">
   <button id="bPrev" aria-label="Previous slide">&larr;</button>
   <button id="bNext" aria-label="Next step">&rarr;</button>
@@ -669,6 +672,7 @@ Thanks, R.
   var notes = document.getElementById("notes");
   var jump = document.getElementById("jump");
   var progress = document.getElementById("progress");
+  var qaContact = document.getElementById("qa-contact");
 
   slides.forEach(function (s, i) {
     var seg = document.createElement("span");
@@ -698,6 +702,7 @@ Thanks, R.
     });
     jump.querySelectorAll("a").forEach(function (a, j) { a.className = j === cur ? "cur" : ""; });
     document.getElementById("count").textContent = (cur + 1) + " / " + slides.length;
+    qaContact.style.display = cur === 17 ? "block" : "none";
     notes.innerHTML = "<b>Slide " + (cur + 1) + " · " + slides[cur].getAttribute("data-title") +
       " · planned " + slides[cur].getAttribute("data-start") + "–" + slides[cur].getAttribute("data-end") + " min</b><br>" +
       slides[cur].getAttribute("data-notes");
