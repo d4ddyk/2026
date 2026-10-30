@@ -129,7 +129,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:30px}
 .chat{background:#fff;border:2px solid var(--line);border-radius:14px;padding:16px;min-height:120px;max-height:500px;overflow:auto}
 .msg{margin:0 0 10px;font-size:18px;line-height:1.38}
 .msg .n{font-family:var(--mono);font-size:14px;text-transform:uppercase;display:block}
-.msg.echo .n{color:var(--ai)} .msg.riya .n{color:var(--defend)} .msg.sys .n{color:var(--threat)}
+.msg.echo .n{color:var(--ai)} .msg.Lucy .n{color:var(--defend)} .msg.sys .n{color:var(--threat)}
 .code{font-family:var(--mono);font-size:15px;background:#0B1626;color:#CFE3F4;padding:10px;border-radius:8px;white-space:pre;overflow:auto}
 .act{display:flex;justify-content:space-between;align-items:center;gap:10px;background:#fff;border:2px solid var(--line);border-radius:10px;padding:10px 14px;margin:0 0 10px;font-size:19px}
 .act .st{font-family:var(--mono);font-size:14px;padding:3px 8px;border-radius:5px;white-space:nowrap}
@@ -169,13 +169,13 @@ input[type=range]{width:100%;accent-color:var(--ink);height:30px}
 <div id="viewport"><div id="stage">
 <!-- 1 -->
 <section class="slide" data-start="0" data-end="4" data-title="Opening question and live poll"
- data-notes="<b>Open (2 min):</b> Read the question aloud and pause. Do not answer it yet.<br><b>Poll (2 min):</b> Ask for a show of hands for A and B and enter the counts with the + buttons. Do not reveal your view.<br><b>Transition:</b> 'Riya will bring this back after we see how a real attack unfolds.'">
-  <div class="eyebrow"><span class="tag">Cybersecurity in the Age of AI</span><span>Master's session · 60 min</span></div>
+ data-notes="<b>Open (2 min):</b> Read the question aloud and pause. Do not answer it yet.<br><b>Poll (2 min):</b> Ask for a show of hands for A and B and enter the counts with the + buttons. Do not reveal your view.<br><b>Transition:</b> 'Lucy will bring this back after we see how a real attack unfolds.'">
+  <div class="eyebrow"><span class="tag">Cybersecurity in the Age of AI</span><span> DUK - Oct 2026</span></div>
   <div class="row" style="margin-top:10px">
     <div class="col" style="flex:1.1">
       <h1>Defend.<br>Adapt.<br>Prepare.</h1>
       <p style="font-size:30px;max-width:640px">If AI investigates alerts and writes exploits, <b>what will security professionals do?</b></p>
-      <div class="say"><span class="av" data-who="riya"></span><div><div class="who">Riya · SOC analyst</div><div class="bubble" style="--c:var(--defend)">Hold your answer. I'll bring it back in 20 minutes.</div></div></div>
+      <div class="say"><span class="av" data-who="Lucy"></span><div><div class="who">Lucy · SOC analyst</div><div class="bubble" style="--c:var(--defend)">Hold your answer. I'll bring it back in 20 minutes.</div></div></div>
     </div>
     <div class="col card" style="align-self:flex-start;margin-top:30px">
       <div class="eyebrow">Live poll · Which is more urgent?</div>
@@ -254,7 +254,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:30px}
 
 <!-- 5 -->
 <section class="slide" data-start="12" data-end="16" data-title="Attack story, part 2"
- data-notes="<b>Reveal step by step.</b> The service principal has more rights than it needs. That is the privilege expansion.<br><b>Signals Riya could have seen:</b> sign-in after MFA reset from new device, repo read outside normal hours, SP listing storage, large egress.<br><b>Public anchor:</b> Snowflake customer tenants (2024): stolen credentials reused against tenants without MFA, followed by data theft and extortion. Validate details before presenting.<br><b>ATT&amp;CK:</b> use it as shared language, not a checklist.">
+ data-notes="<b>Reveal step by step.</b> The service principal has more rights than it needs. That is the privilege expansion.<br><b>Signals Lucy could have seen:</b> sign-in after MFA reset from new device, repo read outside normal hours, SP listing storage, large egress.<br><b>Public anchor:</b> Snowflake customer tenants (2024): stolen credentials reused against tenants without MFA, followed by data theft and extortion. Validate details before presenting.<br><b>ATT&amp;CK:</b> use it as shared language, not a checklist.">
   <div class="eyebrow"><span class="tag threat">Act 2 · The attack</span><span>LumenPay incident clock</span></div>
   <h2>A non-human identity with too many rights turns access into impact</h2>
   <div class="row">
@@ -268,7 +268,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:30px}
     </div>
     <div class="col">
       <div class="say frag"><span class="av" data-who="ghost"></span><div><div class="who">Ghost</div><div class="bubble" style="--c:var(--threat)">The service principal can read every container. Nobody scoped it after the migration.</div></div></div>
-      <div class="say right frag"><span class="av" data-who="riya"></span><div><div class="who" style="text-align:right">Riya · 09:20</div><div class="bubble" style="--c:var(--defend)">Four signals, seven hours apart, in three different tools. None of them fired a high-severity alert on its own.</div></div></div>
+      <div class="say right frag"><span class="av" data-who="Lucy"></span><div><div class="who" style="text-align:right">Lucy · 09:20</div><div class="bubble" style="--c:var(--defend)">Four signals, seven hours apart, in three different tools. None of them fired a high-severity alert on its own.</div></div></div>
       <div class="say frag"><span class="av" data-who="meera"></span><div><div class="who">Meera</div><div class="bubble">Then our problem is correlation and ownership, not just one missing control.</div></div></div>
     </div>
   </div>
@@ -339,7 +339,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:30px}
     <div class="col">
       <button class="primary" data-act="context">Add context</button>
       <div id="ctxbox" style="display:none;margin-top:12px">
-        <div class="say"><span class="av" data-who="riya"></span><div><div class="who">Riya</div><div class="bubble" style="--c:var(--defend)">The identity is Aarav, a finance approver. New device, six minutes after a service-desk MFA reset, at 02:14. Does your answer change?</div></div></div>
+        <div class="say"><span class="av" data-who="Lucy"></span><div><div class="who">Lucy</div><div class="bubble" style="--c:var(--defend)">The identity is Aarav, a finance approver. New device, six minutes after a service-desk MFA reset, at 02:14. Does your answer change?</div></div></div>
         <div class="card" style="font-size:19px"><b>Evidence before containment:</b> service-desk ticket and caller verification · device and session details · repository audit log · storage read and egress logs</div>
       </div>
     </div>
@@ -348,7 +348,7 @@ input[type=range]{width:100%;accent-color:var(--ink);height:30px}
 
 <!-- 9 -->
 <section class="slide" data-start="25" data-end="28" data-title="Purple team loop and governance"
- data-notes="<b>Interact:</b> click 'Run the loop' or click each step. Security is complete only when the treatment is verified and the residual risk is owned.<br><b>Regulatory context:</b> reporting deadlines shape incident response. CERT-In directions set short reporting timelines; DPDP Act 2023 covers personal data. Validate current timelines before presenting.<br><b>Optional:</b> red/blue debate as a rhetorical question. 'Kabir proposes: steal customer data via the support AI. Riya: what telemetry do you need?'">
+ data-notes="<b>Interact:</b> click 'Run the loop' or click each step. Security is complete only when the treatment is verified and the residual risk is owned.<br><b>Regulatory context:</b> reporting deadlines shape incident response. CERT-In directions set short reporting timelines; DPDP Act 2023 covers personal data. Validate current timelines before presenting.<br><b>Optional:</b> red/blue debate as a rhetorical question. 'Kabir proposes: steal customer data via the support AI. Lucy: what telemetry do you need?'">
   <div class="eyebrow"><span class="tag">Act 3 · Purple team &amp; governance</span></div>
   <h2>A finding is not done until the fix is verified and the residual risk has an owner</h2>
   <div class="row">
@@ -402,14 +402,14 @@ input[type=range]{width:100%;accent-color:var(--ink);height:30px}
   <div class="row">
     <div class="col">
       <div class="chat" id="chat">
-        <div class="msg riya"><span class="n">Riya</span>Summarise activity for a.mehta after the MFA reset and draft a hunting query for the service principal.</div>
+        <div class="msg Lucy"><span class="n">Lucy</span>Summarise activity for Aarav after the MFA reset and draft a hunting query for the service principal.</div>
       </div>
       <button class="primary" data-act="askecho" style="margin-top:10px">Ask ECHO</button>
     </div>
     <div class="col">
       <h3>Proposed response actions</h3>
       <div class="act"><span>Enrich sign-in IP and device</span><button class="st auto" data-act="run">Auto</button></div>
-      <div class="act"><span>Revoke a.mehta sessions, require MFA re-registration</span><button class="st auto" data-act="run">Playbook</button></div>
+      <div class="act"><span>Revoke Aarav sessions, require MFA re-registration</span><button class="st auto" data-act="run">Playbook</button></div>
       <div class="act"><span>Rotate the exposed <span class="mono">sp-data-export</span> secret</span><button class="st auto" data-act="run">Playbook</button></div>
       <div class="act"><span>Disable every service principal in the tenant</span><button class="st gate" data-act="gate">Needs approval</button></div>
       <div class="say" id="gatesay" style="display:none"><span class="av" data-who="meera"></span><div><div class="who">Meera</div><div class="bubble">Not yet. Show me the evidence and the blast radius. That switch would stop payments and every pipeline.</div></div></div>
@@ -450,7 +450,7 @@ Thanks, R.
   <h2>Your job is to check the AI's summary: what is fact, assumption, or unsafe?</h2>
   <div class="row">
     <div class="col" style="flex:1.6" id="critique">
-      <button class="sent" data-a="fact">At 02:14 UTC, a.mehta signed in from a new device six minutes after a service-desk MFA reset.<span class="lbl">Unmarked</span></button>
+      <button class="sent" data-a="fact">At 02:14 UTC, Aarav signed in from a new device six minutes after a service-desk MFA reset.<span class="lbl">Unmarked</span></button>
       <button class="sent" data-a="fact">At 02:31 the account read config/settings.json in repository payments-api.<span class="lbl">Unmarked</span></button>
       <button class="sent" data-a="fact">At 02:40 sp-data-export listed the contents of storage account custdata01.<span class="lbl">Unmarked</span></button>
       <button class="sent" data-a="unsup">The activity is attributed to a known ransomware group.<span class="lbl">Unmarked</span></button>
@@ -478,7 +478,7 @@ Thanks, R.
     </div>
     <div class="col">
       <div class="say"><span class="av" data-who="ananya"></span><div><div class="who">Ananya · final-year Master's student</div><div class="bubble" style="--c:var(--student)" id="anansay">I have two certificates. Why do interviewers keep asking what I have built?</div></div></div>
-      <div class="say right"><span class="av" data-who="riya"></span><div><div class="who" style="text-align:right">Riya</div><div class="bubble" style="--c:var(--defend)">Because a certificate shows what you studied. An artifact shows how you think.</div></div></div>
+      <div class="say right"><span class="av" data-who="Lucy"></span><div><div class="who" style="text-align:right">Lucy</div><div class="bubble" style="--c:var(--defend)">Because a certificate shows what you studied. An artifact shows how you think.</div></div></div>
     </div>
   </div>
 </section>
@@ -572,7 +572,7 @@ Thanks, R.
   <div class="cast" id="cast3" style="grid-template-columns:repeat(7,1fr);margin-top:30px"></div>
 </section>
 
-<p id="qa-contact"><a href="https://www.linkedin.com/in/vishnurg/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/vishnurg/</a></p>
+<p id="qa-contact">vishnurg@msn.com</p>
 <div id="chrome">
   <button id="bPrev" aria-label="Previous slide">&larr;</button>
   <button id="bNext" aria-label="Next step">&rarr;</button>
@@ -581,7 +581,7 @@ Thanks, R.
   <span id="sclock">00:00</span>
   <span id="pace">Press T to start session timer</span>
   <button id="bSess">Start (T)</button>
-  <button id="bNotes">Notes (N)</button>
+  <button id="bNotes">(N)</button>
   <button id="bJump">Slides (G)</button>
 </div>
 </div></div>
@@ -620,7 +620,7 @@ Thanks, R.
   }
   var AV = {
     meera: person({ label: "Meera", bg: "#13233A", shirt: "#E8EEF4", skin: "#C68B59", hair: "long", hairc: "#2B1B12", extra: ["glasses"] }),
-    riya: person({ label: "Riya", bg: "#0E7C7B", shirt: "#0B5D5C", skin: "#B97A4F", hair: "bob", hairc: "#1E120B", extra: ["headset"] }),
+    Lucy: person({ label: "Lucy", bg: "#0E7C7B", shirt: "#0B5D5C", skin: "#B97A4F", hair: "bob", hairc: "#1E120B", extra: ["headset"] }),
     kabir: person({ label: "Kabir", bg: "#C8243B", shirt: "#2B2D42", skin: "#A86B43", hair: "short", hairc: "#1B110B", extra: ["beard", "beanie"] }),
     dev: person({ label: "Dev", bg: "#3E6A8A", shirt: "#26465C", skin: "#8D5A3B", hair: "short", hairc: "#140D08", extra: ["gear"] }),
     desk: person({ label: "Service desk agent", bg: "#9DB3C6", shirt: "#3E6A8A", skin: "#D2A07A", hair: "short", hairc: "#4A2E1C", extra: ["headset"] }),
@@ -630,7 +630,7 @@ Thanks, R.
   };
   var CAST = [
     { k: "meera", n: "Meera", r: "CISO, risk owner", line: "Meera owns the risk register. She decides what risk LumenPay accepts, and answers to the board for it." },
-    { k: "riya", n: "Riya", r: "SOC analyst", line: "Riya investigates alerts on the night shift. She works with incomplete evidence and a clock running." },
+    { k: "Lucy", n: "Lucy", r: "SOC analyst", line: "Lucy investigates alerts on the night shift. She works with incomplete evidence and a clock running." },
     { k: "kabir", n: "Kabir", r: "Red team lead", line: "Kabir is paid to think like Ghost, with written permission, scope and rules of engagement." },
     { k: "dev", n: "Dev", r: "Cloud security engineer", line: "Dev builds the controls and logging that turn findings into fixes at scale." },
     { k: "echo", n: "ECHO", r: "Support AI assistant", line: "ECHO answers customer tickets and can search customer records. Useful, and a new attack surface." },
@@ -791,7 +791,7 @@ Thanks, R.
   /* ---------- slide 6 operating model ---------- */
   var OP = {
     off: ["Offensive security", "kabir", "Do our controls and assumptions survive a realistic adversary?", "Pentest and red-team findings, attack paths, retest results"],
-    def: ["Defensive security", "riya", "What is happening now, how far did it go, and how do we contain it?", "Detections, investigations, incident timelines, containment"],
+    def: ["Defensive security", "Lucy", "What is happening now, how far did it go, and how do we contain it?", "Detections, investigations, incident timelines, containment"],
     eng: ["Security engineering", "dev", "Can the control scale, and is the telemetry reliable?", "Logging pipelines, automation, secret scanning, scoped identities"],
     arch: ["Security architecture", "dev", "Where are the trust boundaries with the highest consequence?", "Threat models, identity patterns, secure designs (for example, service-desk verification)"],
     grc: ["GRC & privacy", "meera", "Who accepts this risk, and what evidence shows the control works?", "Policies, control assurance, regulatory reporting, risk acceptance"],
@@ -817,7 +817,7 @@ Thanks, R.
   /* ---------- slide 9 loop ---------- */
   var LOOP = [
     ["Attack", "Red team demonstrates the path", "kabir", "I reused the service-desk reset and the repo secret. Reached custdata01 in 40 minutes."],
-    ["Detect", "Blue team checks telemetry", "riya", "We saw the sign-in and the storage listing, but nothing correlated them."],
+    ["Detect", "Blue team checks telemetry", "Lucy", "We saw the sign-in and the storage listing, but nothing correlated them."],
     ["Engineer", "Close visibility and control gaps", "dev", "Caller verification, secret scanning in CI, scoped the service principal, new correlation rule."],
     ["Retest", "Replay to validate", "kabir", "Replayed it. Blocked at the reset, and the correlation alert fired in 4 minutes."],
     ["Govern", "Risk owner accepts residual risk", "meera", "Residual risk recorded, owner named, review date set. Accepting it is a decision with my name on it."]
@@ -980,12 +980,12 @@ Thanks, R.
       if (chat.querySelector(".echo")) return;
       var m = document.createElement("div"); m.className = "msg echo";
       m.innerHTML = '<span class="n">ECHO · draft, needs analyst validation</span>' +
-        "a.mehta: MFA reset by service desk at 02:08, sign-in from an unregistered device at 02:14 (new IP, new country). " +
+        "Aarav: MFA reset by service desk at 02:08, sign-in from an unregistered device at 02:14 (new IP, new country). " +
         "Read 1 file in payments-api at 02:31. sp-data-export authenticated at 02:39 from the same IP range and listed custdata01 at 02:40." +
         '<div class="code">AADServicePrincipalSignInLogs\n| where TimeGenerated &gt; ago(12h)\n| where ServicePrincipalName == "sp-data-export"\n| summarize count() by IPAddress, ResourceDisplayName\n| order by count_ desc</div>';
       chat.appendChild(m);
-      var r = document.createElement("div"); r.className = "msg riya";
-      r.innerHTML = '<span class="n">Riya</span>Good draft. I still need the storage egress logs before I say what left the building.';
+      var r = document.createElement("div"); r.className = "msg Lucy";
+      r.innerHTML = '<span class="n">Lucy</span>Good draft. I still need the storage egress logs before I say what left the building.';
       chat.appendChild(r);
       chat.scrollTop = chat.scrollHeight;
     }
